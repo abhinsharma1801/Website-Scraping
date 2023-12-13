@@ -11,18 +11,17 @@ Show progress on console.
 
 **Installation:**
 Clone the repository: git clone https://github.com/abhinsharma1801/Website-Scraping.git
-Open the project in your preferred Java IDE (IntelliJ, Eclipse etc)
-
-**Configuration:**
-BASE_URL (Optional) - Change in application.properties file. Default value is already set.
-DESTINATION_FOLDER  (Optional) - Change in application.properties file. Default value is already set.
+Open the project in your preferred Java IDE (IntelliJ, Eclipse etc).
 
 **Run the Application:**
 Build maven project.
 Execute the main method in the WebScrapingApplication class.
+It will download 3 folder(static, media & catalogue) and 1 index.html(homepage file).
+Run the application by double clicking on index.html. It will open the website in local.
+Browse the website from the local.
 
 **Logs:**
 Logs are generated using SLF4J and can be viewed in console.
 
 **Notes:**
-Ensure you have Java installed on your machine.
+Ensure you have Java (8 or higher) installed on your machine.
