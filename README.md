@@ -17,7 +17,9 @@ Open the project in your preferred Java IDE (IntelliJ, Eclipse etc).
 Build maven project.
 Execute the main method in the WebScrapingApplication class.
 It will download 3 folder(static, media & catalogue) and 1 index.html(homepage file).
-Run the application by double clicking on index.html. It will open the website in local.
+Files and folders will be downloaded to the D drive by default. If you encounter access denied issue or 
+don't have a D drive, please modify the drive name in the code to an available drive and run the application.
+Run the application by double-clicking on index.html. It will open the website in local.
 Browse the website from the local.
 
 **Logs:**

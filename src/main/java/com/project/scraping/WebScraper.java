@@ -18,11 +18,11 @@ import java.util.Set;
 import java.util.concurrent.CompletableFuture;
 
 @Slf4j
-public class WebScrapper {
+public class WebScraper {
 
     private static final String BASE_URL = "https://books.toscrape.com/";
 
-    private WebScrapper() {
+    private WebScraper() {
     }
 
     private static final Set<String> processedUrls = new HashSet<>();
@@ -73,9 +73,9 @@ public class WebScrapper {
     /*
      * Download resources (HTML, CSS, Images, Icons) for the current page.
      */
-    private static void downloadElements(Elements elements, String absUrl, Path destinationFolder) {
+    private static void downloadElements(Elements elements, String attribute, Path destinationFolder) {
         elements.forEach(element -> {
-            String elementUrl = element.absUrl(absUrl);
+            String elementUrl = element.absUrl(attribute);
             if (elementUrl.startsWith(BASE_URL)) {
                 CompletableFuture.runAsync(() -> {
                     try {

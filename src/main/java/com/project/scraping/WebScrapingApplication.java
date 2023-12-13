@@ -17,7 +17,7 @@ public class WebScrapingApplication {
     public static void main(String[] args) {
         SpringApplication.run(WebScrapingApplication.class, args);
 
-        CompletableFuture<Void> future = WebScrapper.scrape(BASE_URL, Path.of(DESTINATION_FOLDER));
+        CompletableFuture<Void> future = WebScraper.scrape(BASE_URL, Path.of(DESTINATION_FOLDER));
         log.info("Web scraping started...");
 
         future.whenComplete((result, throwable) -> {
