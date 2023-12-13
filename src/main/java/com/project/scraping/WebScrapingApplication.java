@@ -20,16 +20,14 @@ public class WebScrapingApplication {
         CompletableFuture<Void> future = WebScrapper.scrape(BASE_URL, Path.of(DESTINATION_FOLDER));
         log.info("Web scraping started...");
 
-        if (future != null) {
-            future.whenComplete((result, throwable) -> {
-                if (throwable != null) {
-                    log.info("Web scraping failed: ");
-                } else {
-                    log.info("Web scraping completed successfully!");
-                }
-            });
-            future.join();
-        }
+        future.whenComplete((result, throwable) -> {
+            if (throwable != null) {
+                log.info("Web scraping failed: ");
+            } else {
+                log.info("Web scraping completed successfully!");
+            }
+        });
+        future.join();
 
         log.info("Program completed.");
     }
